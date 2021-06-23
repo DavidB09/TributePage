@@ -1,0 +1,716 @@
+html {
+    font-size: 62.5%; 
+    transition: 0.5s; 
+}
+
+/* MAIN ELEMENTS */
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px;
+    color: #b3b394;
+    background-color: #003891;
+    font-family: Florence;
+    text-align: center;
+}
+
+header {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-around; 
+    height: 100vh; 
+    background-color: #0a0a0a;
+    overflow: hidden;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    pointer-events: none;
+}
+
+line {
+    stroke: #da5b33; 
+    stroke-width: 7px;
+    stroke-dasharray: 7;
+}
+
+blockquote {
+    margin: 0px;
+}
+
+blockquote p {
+    margin: 0px; 
+}
+
+iframe {
+    height: 15rem;
+    width: 25rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    padding: 4rem;
+    font-size: 1.5rem; 
+}
+
+footer a {
+    color: #ff0000;
+    text-decoration: none; 
+    z-index: 8;
+}
+
+footer a:visited {
+    color: #da5b33;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    margin: 0px; 
+    font-family: Brush Script MT;
+    font-size: 5rem;
+}
+
+h3 {
+    font-size: 3rem; 
+}
+
+h4 {
+    font-size: 2rem; 
+}
+
+h5 {
+    font-size: 1.75rem; 
+}
+
+/* CLASSES */
+
+/* Header */
+
+.header-container-description {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    padding: 2.5rem; 
+}
+
+.header-description {
+    font-size: 1.25rem; 
+}
+
+.header-container-image {
+    position: relative; 
+    display: flex;
+    width: 50%; 
+    max-width: 70rem; 
+    padding: 2rem; 
+    z-index: 1; 
+}
+
+.header-container-image::before {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    box-shadow:  0 0 15px 20px #0a0a0a inset; 
+    z-index: 2; 
+}
+
+.header-image {
+    position: relative;
+    height: auto;
+    width: 100%; 
+    margin: auto;
+}
+
+.audio-check {
+    position: absolute; 
+    bottom: 5rem; 
+    left: 0;
+    padding: 2.5rem; 
+    color: #000; 
+    background-color: #ff0000;
+    font-size: 1.5rem; 
+    text-decoration: none;
+    border-radius: 0px 10px 10px 0px;
+    transform: translateX(-500px);
+    transition: transform 2.5s; 
+    z-index: 7;
+}
+
+.audio-check:hover {
+    text-decoration: underline;
+}
+
+/* Main */
+
+.main-container-description {
+    position: relative;
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    height: 40rem; 
+    width: 100%; 
+    color: #000000; 
+    background-color: #aeafb0;
+    z-index: 4; 
+}
+
+.main-container-description::before {
+    content: ""; 
+    position: absolute; 
+    top: 25%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: #aeafb0; 
+    transform: skewY(3deg);
+    transform-origin: 50% 0;
+    z-index: 3; 
+}
+
+.description-birth {
+    position: relative;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    z-index: 5; 
+}
+
+.image-birth {
+    height: auto;
+    width: 50%;
+}
+
+.image-description {
+    position: relative;
+    height: 15rem;
+    width: auto;
+    margin: 0px;
+    border-radius: 10px; 
+    z-index: 6; 
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20rem 0 7.5rem 0; 
+}
+
+.container-performances {
+    position: relative; 
+    height: 100rem; 
+    width: 85%; 
+    color: #000000; 
+    background-color: #aeafb0; 
+    overflow: hidden; 
+}
+
+.container-video {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    font-size: 1.25rem; 
+}
+
+.performance {
+    position: absolute; 
+    top: 10%;
+    width: 100%; 
+    transition: transform 1s; 
+}
+
+.button-performance {
+    margin: 1rem; 
+    background-color: transparent;
+    font-size: 4rem;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.5s, color 0.25s;
+}
+
+.button-performance:hover {
+    color: #b3b394; 
+    background-color: #003891;
+}
+
+.button-left {
+    position: absolute; 
+    right: 50%;
+    bottom: 0; 
+}
+    
+.button-right {
+    position: absolute; 
+    bottom: 0; 
+    left: 50%;
+}
+
+/* Main Images */
+
+.container-image {
+    margin: 0; 
+}
+
+.main-image {
+    position: relative; 
+    height: 30rem; 
+    width: auto; 
+    margin-top: 2.5rem; 
+    border-radius: 10px;
+}
+
+.image-1 {
+    grid-column: 1; 
+    grid-row: 2; 
+}
+
+.image-2 {
+    grid-column: 4; 
+    grid-row: 4; 
+    justify-self: start;
+}
+
+.image-3 {
+    grid-column: 1; 
+    grid-row: 6; 
+}
+
+.image-4 {
+    grid-column: 4; 
+    grid-row: 9; 
+    justify-self: start;
+}
+
+.image-5 {
+    grid-column: 1; 
+    grid-row: 11; 
+}
+
+/* Main Circles */
+
+/* Source Code for amazing vinyl record design is from Ana Tudor */
+/* Link: https://codepen.io/thebabydino/pen/HjJlL */
+
+.circle {
+    height: 17rem;
+    width: 17rem;
+    margin-top: 2.5rem;
+    background-color: transparent; 
+    perspective: 1000px;
+}
+
+.circle-inner {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.circle:hover .circle-inner {
+    transform: rotateY(180deg);
+}
+
+.circle-front, .circle-back {
+    position: absolute;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    height: 100%;
+    width: 100%;
+    color: #d9d9ce; 
+    background: repeating-radial-gradient(#141212, #141212 24px, #21201f 26px);
+    background-size: 100% 100%; 
+    text-align: center; 
+    border-radius: 50%; 
+    backface-visibility: hidden;
+}
+
+.circle-front {
+    font-size: 1.5rem; 
+    animation: rotation 4s infinite linear;
+}
+
+.circle-back {
+    font-size: 1.2rem; 
+    transform: rotateY(180deg);
+}
+
+.circle-year {
+    display: flex; 
+    justify-content: center; 
+    height: 7rem;
+    width: 7rem;
+    background: #b5ac9a;
+    box-shadow: 0 0 0 0.5rem #da5b33,
+        inset 0 0 0 5.3rem #da5b33;
+    border: solid 1px #d9a388;
+    border-radius: 50%;
+}
+
+.circle-year h3 {
+    position: relative; 
+}
+
+.two-years {
+    display: flex; 
+    flex-direction: column; 
+}
+
+.two-years h3 {
+    margin: 0rem; 
+}
+
+/* Individual Circles */
+
+.circle-1 {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+}
+
+.circle-2 {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.circle-3 {
+    grid-column: 2;
+    grid-row: 3;
+    justify-self: end;
+}
+
+.circle-4 {
+    grid-column: 3;
+    grid-row: 4;
+}
+
+.circle-5 {
+    grid-column: 2;
+    grid-row: 5;
+    justify-self: end;
+}
+
+.circle-6 {
+    grid-column: 3;
+    grid-row: 6;
+}
+
+.circle-7 {
+    grid-column: 2;
+    grid-row: 7;
+    justify-self: end;
+    height: 24rem;
+    width: 24rem;
+}
+
+.circle-8 {
+    grid-column: 3;
+    grid-row: 8;
+}
+
+.circle-9 {
+    grid-column: 2;
+    grid-row: 9;
+    justify-self: end;
+}
+
+.circle-10 {
+    grid-column: 3;
+    grid-row: 10;
+    height: 21rem;
+    width: 21rem;
+}
+
+.circle-11 {
+    grid-column: 2;
+    grid-row: 11;
+    justify-self: end;
+    height: 22rem;
+    width: 22rem;
+}
+
+.circle-12 {
+    grid-column: 3;
+    grid-row: 12;
+}
+
+.circle-13 {
+    grid-column: 2;
+    grid-row: 13;
+    justify-self: end;
+}
+
+.circle-14 {
+    grid-column: 3;
+    grid-row: 14;
+}
+
+/*  Keyframes */ 
+
+@keyframes rotation {
+    from {
+        transform-origin: center;
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform-origin: center;
+        transform: rotate(360deg);
+    }
+}
+
+/* Media Queries */
+
+@media (min-width: 600px) {
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 10rem;
+    }
+
+    .header-description {
+        font-size: 1.5rem; 
+    }
+
+    .description-birth {
+        font-size: 2rem;
+    }
+
+    .audio-check {
+        font-size: 2.5rem; 
+    }
+}
+
+@media (min-width: 1000px) {
+    line {
+        stroke-width: 10px;
+        stroke-dasharray: 12;
+    }
+
+    iframe {
+        height: 30rem;
+        width: 50rem;
+    }
+
+    footer p {
+        padding: 8rem;
+        font-size: 2.5rem; 
+    }
+
+    h1 {
+        font-size: 6rem;
+    }
+
+    h2 {
+        font-size: 15rem;
+    }
+
+    h4 {
+        font-size: 3rem; 
+    }
+
+    h5 {
+        font-size: 2.5rem; 
+    }
+
+    .main-container-description {
+        flex-direction: row;
+    }
+
+    .header-description {
+        font-size: 2rem; 
+    }
+
+    .image-description {
+        top: 15%; 
+        height: auto;
+        margin: 3rem; 
+        border-radius: 10px; 
+    }
+
+    .description-birth {
+        height: 75%;
+    }
+
+    .audio-check {
+        padding: 5rem;
+    }
+
+    .main-image {
+        height: 50rem; 
+        margin: 3rem; 
+    }
+
+    .initial-slide {
+        transition: transform 1s, opacity 1s; 
+    }
+
+    .container-performances {
+        height: 160rem;
+    }
+
+    .container-video {
+        font-size: 2rem; 
+    }
+
+    .button-performance {
+        font-size: 8rem;
+    }
+
+    .circle {
+        height: 27rem;
+        width: 27rem;
+        margin: 3rem;
+    }
+
+    .circle-year {
+        height: 12rem;
+        width: 12rem;
+    }
+
+    .circle-front {
+        font-size: 3rem; 
+    }
+
+    .circle-back {
+        font-size: 1.5rem; 
+    }
+
+    .circle-year h3 {
+        bottom: 2rem;
+    }
+
+    .two-years h3 {
+        margin-top: 3rem; 
+    }
+
+    .circle-4 {
+        height: 28rem;
+        width: 28rem;
+    }
+
+    .circle-7 {
+        height: 31rem;
+        width: 31rem;
+    }
+
+    .circle-11 {
+        height: 28rem;
+        width: 28rem;
+    }
+}
+
+@media (min-width: 1700px) {
+    .main-container-description::before {
+        top: 20%;
+    }
+
+    .image-description {
+        margin-left: 100px; 
+    }
+
+    .description-birth {
+        margin: 0px;
+    }
+
+    .initial-hidden {
+        opacity: 0; 
+        transform: translateY(12rem); 
+    }
+
+    .main-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(14, 1fr); 
+    }
+
+    .main-image {
+        position: relative; 
+        height: 50rem; 
+        margin: 0px; 
+    }
+
+    .image-1 {
+        justify-self: flex-end; 
+    }
+
+    .image-3 {
+        justify-self: flex-end; 
+    }
+
+    .image-5 {
+        justify-self: flex-end; 
+    }
+
+    .container-performances {
+        height: 115rem;
+    }
+
+    .container-video {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-evenly; 
+    }
+
+    .button-left {
+        right: 92%; 
+        bottom: 40%; 
+    }
+
+    .button-right {
+        bottom: 40%; 
+        left: 92%; 
+    }
+
+    .circle {
+        margin: 0px;
+    }
+}
+
+@media (min-width: 2200px) {
+    .container-performances {
+        width: 60%; 
+    }
+
+    .button-left {
+        right: 90%; 
+        bottom: 40%; 
+    }
+
+    .button-right {
+        bottom: 40%; 
+        left: 90%; 
+    }
+}
