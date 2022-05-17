@@ -817,7 +817,7 @@ h5 {
     }
 }
 
-@media (min-width: 1700px) {
+@media (min-width: 1850px) {
     .main-container-description::before {
         top: 20%;
     }
