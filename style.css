@@ -29,11 +29,12 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; 
+    flex-direction: column;
     -webkit-box-align: center; 
         -ms-flex-align: center; 
             align-items: center; 
     -ms-flex-pack: distribute; 
-        justify-content: space-around; 
+        justify-content: center; 
     height: 100vh; 
     background-color: #0a0a0a;
     overflow: hidden;
@@ -147,7 +148,7 @@ h5 {
     display: -webkit-box; 
     display: -ms-flexbox; 
     display: flex;
-    width: 50%; 
+    width: 45%; 
     max-width: 70rem; 
     padding: 2rem; 
     z-index: 1; 
@@ -669,13 +670,12 @@ h5 {
 /**** MEDIA QUERY ****/
 
 @media (min-width: 600px) {
-
     h1 {
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
 
     h2 {
-        font-size: 10rem;
+        font-size: 8rem;
     }
 
     .header-description {
@@ -691,7 +691,12 @@ h5 {
     }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 800px) {
+    header {
+        flex-direction: row;
+        justify-content: space-around; 
+    }
+
     line {
         stroke-width: 10px;
         stroke-dasharray: 12;
@@ -704,15 +709,15 @@ h5 {
 
     footer p {
         padding: 8rem;
-        font-size: 2.5rem; 
+        font-size: 2.1rem; 
     }
 
     h1 {
-        font-size: 6rem;
+        font-size: 5rem;
     }
 
     h2 {
-        font-size: 15rem;
+        font-size: 10rem;
     }
 
     h4 {
@@ -736,7 +741,7 @@ h5 {
 
     .image-description {
         top: 15%; 
-        height: auto;
+        height: 30rem;
         margin: 3rem; 
         border-radius: 10px; 
     }
@@ -817,12 +822,21 @@ h5 {
     }
 }
 
-@media (min-width: 1850px) {
+@media (min-width: 1350px) {
+    h1 {
+        font-size: 6rem;
+    }
+
+    h2 {
+        font-size: 15rem;
+    }
+
     .main-container-description::before {
         top: 20%;
     }
 
     .image-description {
+        height: auto;
         margin-left: 100px; 
     }
 
@@ -846,7 +860,7 @@ h5 {
 
     .main-image {
         position: relative; 
-        height: 50rem; 
+        height: 35rem; 
         margin: 0px; 
     }
 
@@ -879,6 +893,16 @@ h5 {
                 justify-content: space-evenly; 
     }
 
+    .circle {
+        margin: 0px;
+    }
+}
+
+@media (min-width: 1900px) {
+    .main-image {
+        height: 45rem;
+    }
+
     .button-left {
         right: 92%; 
         bottom: 40%; 
@@ -887,10 +911,6 @@ h5 {
     .button-right {
         bottom: 40%; 
         left: 92%; 
-    }
-
-    .circle {
-        margin: 0px;
     }
 }
 
