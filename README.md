@@ -7,5 +7,5 @@ A repo for a tribute page of Son House created by David Brunner
 - Responsive web design
 - CSS grid positioning
 - Altering SVG elements based on window resizing
-- Tranformations and transitions within CSS
+- Transformations and transitions within CSS
 - Audio manipulation based on user input
